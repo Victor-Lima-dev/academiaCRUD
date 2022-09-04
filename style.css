@@ -1,3 +1,16 @@
+button
+{
+    width: 200px;
+}
 
 
-
+.icones
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+i
+{
+    cursor: pointer;
+}
