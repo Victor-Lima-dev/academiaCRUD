@@ -67,6 +67,7 @@ treinos.innerHTML = ""
       </div> `
     })
     limpaForm()
+    console.log(dados)
 }
 
 let limpaForm = () => {
@@ -92,7 +93,7 @@ let edit = (e) => {
 let apagar = (e) => {
     e.parentElement.parentElement.parentElement.remove()
     dados.splice(e.parentElement.parentElement.id, 1)
-    localStorage.setItem("dados", JSON.stringify(data))
+    localStorage.setItem("dados", JSON.stringify(dados))
 }
 
 
@@ -101,3 +102,4 @@ let apagar = (e) => {
     
     criaTreino()
 })()
+

@@ -2,51 +2,57 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/001d53005b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/001d53005b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 
-    <title>Treino</title>
+  <title>Treino</title>
 </head>
 
 <body class="container">
-    <form>
-        <h1>Adicione seu treino</h1>
-        <div class="row" >
-            <div class="form-floating mb-3 col">
-                <input id="exercicio"type="text" class="form-control" id="floatingInput" placeholder="exercicio">
-                <label class="ms-2" for="floatingInput">Exercicio</label>
-              </div>
-            <div class="form-floating mb-3 col">
-                <input id="series" type="text" class="form-control" id="floatingInput" placeholder="Séries">
-                <label class="ms-2" for="floatingInput">Séries</label>
-              </div>
-            <div class="form-floating mb-3 col">
-                <input id="descanso"type="text" class="form-control" id="floatingInput" placeholder="Tempo de Descanso">
-                <label class="ms-2"for="floatingInput">Tempo de Descanso</label>
-              </div>
-            <div class="form-floating mb-3 col">
-                <input id="carga" type="text" class="form-control" id="floatingInput" placeholder="Carga">
-                <label class="ms-2"for="floatingInput">Carga</label>
-              </div>
-            </div>
-            <p id="msgErro"></p>
-            <button type="submit" class="btn btn-success btn-lg" id="btnCriar">Criar</button>
-    </form>
-<div class="row m-3" id="treinos">
-    
-</div>
+  <form>
+    <h1>Adicione seu treino</h1>
+    <div class="row">
+      <div class="form-floating mb-3 col">
+        <input id="exercicio" type="text" class="form-control" id="floatingInput" placeholder="exercicio">
+        <label class="ms-2" for="floatingInput">Exercicio</label>
+      </div>
+      <div class="form-floating mb-3 col">
+        <input id="series" type="text" class="form-control" id="floatingInput" placeholder="Séries">
+        <label class="ms-2" for="floatingInput">Séries</label>
+      </div>
+      <div class="form-floating mb-3 col">
+        <input id="descanso" type="text" class="form-control" id="floatingInput" placeholder="Tempo de Descanso">
+        <label class="ms-2" for="floatingInput">Tempo de Descanso</label>
+      </div>
+      <div class="form-floating mb-3 col">
+        <input id="carga" type="text" class="form-control" id="floatingInput" placeholder="Carga">
+        <label class="ms-2" for="floatingInput">Carga</label>
+      </div>
+    </div>
+    <p id="msgErro"></p>
+    <button type="submit" class="btn btn-success btn-lg" id="btnCriar">Criar</button>
+  </form>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+  <div class="row m-3" id="treinos">
+
+  </div>
+  <div id="teste">
+    <button id = "btnTreinar" class="btn btn-success btn-lg">Treinar</button>
+    <h2>Historico Treino</h2>
+    <p id="msgErroTreinar"></p>
+  </div>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="treinar.js"></script>
 </body>
 
 </html>
