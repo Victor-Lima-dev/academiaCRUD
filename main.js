@@ -29,34 +29,43 @@ let validacaoForm = () => {
 
 }
 
-let dados = {}
+let dados = [{}]
 
-let criaDados = () => {
-    dados["exercicio"] = exercicio.value
-    dados["series"] = series.value
-    dados["descanso"] = descanso.value
-    dados["carga"] = carga.value
+let criaDados = () => { 
 
+    dados.push({
+        exercicio : exercicio.value,
+        series : series.value,
+        descanso : descanso.value,
+        carga : carga.value
+    })
+
+    localStorage.setItem("dados", JSON.stringify(dados))
 
     criaTreino()
 }
 
 let criaTreino = () => {
+treinos.innerHTML = ""
 
-    treinos.innerHTML += `
-    <div class="card col-3">
+    dados.map((x,y) =>{
+
+   
+   return treinos.innerHTML += `
+    <div id = ${y} class="card col-3">
         <div class="card-body">
-          <p>${dados.exercicio}</p>
-          <p>${dados.descanso}</p>
-          <p>${dados.series}</p>
-          <p>${dados.carga}</p>
+          <p>${x.exercicio}</p>
+          
+          <p>${x.descanso}</p>
+          <p>${x.series}</p>
+          <p>${x.carga}</p>
           <div class="icones">
               <i class="fa-solid fa-pen-to-square me-2 " onclick="edit(this)"></i>
               <i class="fa-solid fa-trash" onclick="apagar(this)"></i>
           </div>
         </div>
       </div> `
-
+    })
     limpaForm()
 }
 
@@ -82,4 +91,13 @@ let edit = (e) => {
 
 let apagar = (e) => {
     e.parentElement.parentElement.parentElement.remove()
+    dados.splice(e.parentElement.parentElement.id, 1)
+    localStorage.setItem("dados", JSON.stringify(data))
 }
+
+
+(() => {
+    dados = JSON.parse(localStorage.getItem("dados")) || []
+    
+    criaTreino()
+})()
